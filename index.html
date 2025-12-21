@@ -1,137 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Keas Village Student Accommodation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #1f3a5f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #162a45;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-            background: white;
-            margin: 10px;
-            border-radius: 5px;
-        }
-        .price-box {
-            background: #eef3f8;
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 5px solid #1f3a5f;
-        }
-        button {
-            background: #1f3a5f;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #162a45;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Keas Village Student Accommodation | Kimberley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2") center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #1f3a5f;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav {
+      background: white;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 12px;
+      color: #1f3a5f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1f3a5f;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: #1f3a5f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Keas Village Student Accommodation</h1>
-    <p>Safe • Affordable • Student Living in Kimberley</p>
+  <h1>Keas Village Student Accommodation</h1>
+  <p>Safe • Affordable • Comfortable Student Living in Kimberley</p>
+  <a href="#booking" class="btn">Book a Room</a>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#rooms">Rooms & Prices</a>
-    <a href="#booking">Book Now</a>
-    <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#rooms">Rooms</a>
+  <a href="#booking">Book</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-    <h2>Welcome</h2>
-    <p>
-        Keas Village Student Accommodation offers clean, safe, and affordable
-        accommodation for students in Kimberley. Our rooms are designed to
-        provide a comfortable learning and living environment.
-    </p>
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Keas Village Student Accommodation provides safe, clean, and affordable
+    housing for students in Kimberley. Our residence is designed to support
+    academic success with a peaceful and secure living environment.
+  </p>
 </section>
 
 <section id="rooms">
-    <h2>Rooms & Prices (Monthly)</h2>
+  <h2>Rooms & Monthly Prices</h2>
 
-    <div class="price-box">
-        <h3>Sharing Room</h3>
-        <p><strong>Price:</strong> R2,500 per month</p>
-        <p>Ideal for students who want affordable shared living.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Sharing Room</h3>
+      <p class="price">R2,500 / month</p>
+      <p>Affordable shared accommodation suitable for students.</p>
     </div>
 
-    <div class="price-box">
-        <h3>Single Room</h3>
-        <p><strong>Price:</strong> R3,000 per month</p>
-        <p>Private room for students who prefer personal space.</p>
+    <div class="card">
+      <h3>Single Room</h3>
+      <p class="price">R3,000 / month</p>
+      <p>Private room for students who prefer their own space.</p>
     </div>
+  </div>
 </section>
 
 <section id="booking">
-    <h2>Booking Request</h2>
-    <p>Fill in the form below and we will contact you.</p>
+  <h2>Booking Request</h2>
+  <p>Submit your details and we will contact you.</p>
 
-    <form action="https://formspree.io/f/xayrzznd" method="POST">
-        <label>Full Name</label><br>
-        <input type="text" name="name" required><br><br>
+  <form action="https://formspree.io/f/xayrzznd" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
 
-        <label>Email</label><br>
-        <input type="email" name="email" required><br><br>
+    <select name="room">
+      <option>Sharing Room - R2500</option>
+      <option>Single Room - R3000</option>
+    </select>
 
-        <label>Phone Number</label><br>
-        <input type="text" name="phone" required><br><br>
+    <input type="date" name="movein">
 
-        <label>Room Type</label><br>
-        <select name="room">
-            <option>Sharing - R2500</option>
-            <option>Single - R3000</option>
-        </select><br><br>
-
-        <label>Expected Move-in Date</label><br>
-        <input type="date" name="date"><br><br>
-
-        <button type="submit">Send Booking Request</button>
-    </form>
+    <button class="btn" type="submit">Send Booking Request</button>
+  </form>
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Location:</strong> Kimberley</p>
-    <p><strong>WhatsApp:</strong></p>
-    <a href="https://wa.me/27762816330">
-        <button>Chat on WhatsApp</button>
-    </a>
+  <h2>Contact Us</h2>
+  <p><strong>Location:</strong> Kimberley</p>
+  <p><strong>WhatsApp:</strong></p>
+  <a class="btn" href="https://wa.me/27762816330">Chat on WhatsApp</a>
 </section>
 
 <footer>
-    <p>© 2025 Keas Village Student Accommodation</p>
+  <p>© 2025 Keas Village Student Accommodation</p>
 </footer>
 
 </body>
