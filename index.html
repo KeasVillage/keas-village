@@ -38,94 +38,68 @@
 </section>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
 
-    header {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-      url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2") center/cover;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
+  section {
+    padding: 20px;
+    margin: 15px 10px;
+  }
 
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+  h1, h2, h3 {
+    text-align: center;
+  }
 
-    header p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
+  p, li {
+    font-size: 16px;
+  }
 
-    .btn {
-      background: #1f3a5f;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  .room-card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-    nav {
-      background: white;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+  .room-card img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+  }
 
-    nav a {
-      margin: 0 12px;
-      color: #1f3a5f;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  a.button, button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+  }
 
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: 768px) {
     section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width: 900px;
+      margin: 20px auto;
     }
+  }
+</style>
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      color: #1f3a5f;
-    }
-
-    form input, form select {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    footer {
-      background: #1f3a5f;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
 </head>
 
 <body>
@@ -133,7 +107,8 @@
 <header>
   <h1>Keas Village Student Accommodation</h1>
   <p>Safe • Affordable • Comfortable Student Living in Kimberley</p>
-  <a href="#booking" class="btn">Book a Room</a>
+  <a href="#booking" class="button">Book Now</a>
+
 </header>
 
 <nav>
@@ -251,17 +226,14 @@
 
   <form action="https://formspree.io/f/mojaljqq" method="POST">
 
-  <input type="text" name="full_name" placeholder="Full Name" required>
+ <input type="text" name="name" placeholder="Full Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<select name="room_type">
+  <option value="">Select Room Type</option>
+  <option>Sharing Room</option>
+  <option>Single Room</option>
+</select>
 
-  <input type="email" name="email" placeholder="Email Address" required>
-
-  <input type="tel" name="phone" placeholder="Phone Number (WhatsApp)" required>
-
-  <select name="room_type" required>
-    <option value="">Select Room Type</option>
-    <option>Sharing Room - R2500</option>
-    <option>Single Room - R3000</option>
-  </select>
 
   <input type="date" name="move_in_date" required>
 
@@ -300,7 +272,10 @@
   <h2>Contact Us</h2>
   <p><strong>Location:</strong> Kimberley</p>
   <p><strong>WhatsApp:</strong></p>
-  <a class="btn" href="https://wa.me/27762816330">Chat on WhatsApp</a>
+  <a href="https://wa.me/27762816330" class="button">
+  Chat with Us on WhatsApp
+</a>
+
 </section>
 
 <footer>
